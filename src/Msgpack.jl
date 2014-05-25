@@ -185,8 +185,8 @@ pack(s, v::String) = begin
     n = sizeof(v)
     if n < 2^5
         write(s, STR_F | uint8(n))
-    elseif n < 2^8
-        wh(s, 0xd9, uint8(n))
+    #elseif n < 2^8
+    #    wh(s, 0xd9, uint8(n))
     elseif n < 2^16
         wh(s, 0xda, uint16(n))
     elseif n < 2^32
