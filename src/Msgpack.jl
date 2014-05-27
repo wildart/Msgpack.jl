@@ -127,7 +127,7 @@ unpack_arr(s, n) = begin
     out
 end
 
-unpack_str(s, n) = utf8(readbytes(s, n))
+unpack_str(s, n) = bytestring(readbytes(s, n)) #bytestring
 unpack_bin(s, n) = readbytes(s, n)
 
 wh(io, head, v) = begin
